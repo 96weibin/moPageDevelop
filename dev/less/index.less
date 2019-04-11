@@ -1,0 +1,114 @@
+
+@green1:#1abc9c;
+@green2:#16a085;
+@green3:#2ecc71;
+@green4:#27AE60;
+@blue:#3498db;
+
+@blue:#2980b9;
+@purple:#9b59b6;
+@purple:#8e44ad;
+@dark:#34495e;
+@dark2:#2c3e50;
+
+@yellow:#f1c40f;
+@orange:#f39c12;
+@orange2:#e67e22;
+@orange3:#d35400;
+@red:#e74c3c;
+
+@red2:#c0392b;
+@white:#ecf0f0;
+@gray:#bdc3c7;
+@gray2:#95a5a6;
+@gray3:#7f8c8d;
+
+//高度
+@headerHeight : 65px;
+@navHeight : 50px;
+@clientWidth : 1600px;
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  color: @dark;
+  // min-width: 1300px;
+  font-size: 14px;
+  width: @clientWidth;
+}
+header{
+  height: @headerHeight;
+  .title{
+    height: @headerHeight;
+    line-height: @headerHeight;
+    font-size: 0.5 * @headerHeight;
+    margin-left: @headerHeight;
+    color: @blue;
+    font-weight : bold;
+  }
+}
+nav{
+  // border-top: 1px solid @gray;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 0 15px;
+  // padding-top: 0.1 * @navHeight;
+  height: @navHeight;
+  background: @gray;
+  label{
+    float: left;
+    line-height: @navHeight;
+    margin:0 0 0 10px;
+    // display: block;
+    
+
+  }
+  .form_date{
+    height: 30px;
+    width: 140px;
+    margin-top: 8px;
+    float: left;
+  }
+  .scope{
+    float: left;
+    width: 80px;
+    margin-top: 8px;
+  }
+  .machineKind{
+    float: left;
+    width: 100px;
+    margin-top: 8px;
+  }
+  .operation{
+    float: left;
+    width: 100px;
+    margin-top: 8px;
+  }
+  .mainType{
+    float: left;
+    width: 100px;
+    margin-top: 8px;
+  }
+  .exceptionTypes{
+    float: left;
+    width: 100px;
+    margin-top: 8px;
+  }
+}
+article{
+  // margin-top: 1px;
+  .bukenengchongming{
+    margin:0 15px;
+    background: @gray2;
+    position: relative;
+    height: 50px;
+    .bukenengchongmingitem{
+      width: 100px;
+      margin: 2px 5px;
+      background: @yellow;
+      float: left;
+    }
+  }
+
+}

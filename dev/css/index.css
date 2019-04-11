@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  color: #34495e;
+  font-size: 14px;
+  width: 1600px;
+}
+header {
+  height: 65px;
+}
+header .title {
+  height: 65px;
+  line-height: 65px;
+  font-size: 32.5px;
+  margin-left: 65px;
+  color: #2980b9;
+  font-weight: bold;
+}
+nav {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 0 15px;
+  height: 50px;
+  background: #bdc3c7;
+}
+nav label {
+  float: left;
+  line-height: 50px;
+  margin: 0 0 0 10px;
+}
+nav .form_date {
+  height: 30px;
+  width: 140px;
+  margin-top: 8px;
+  float: left;
+}
+nav .scope {
+  float: left;
+  width: 80px;
+  margin-top: 8px;
+}
+nav .machineKind {
+  float: left;
+  width: 100px;
+  margin-top: 8px;
+}
+nav .operation {
+  float: left;
+  width: 100px;
+  margin-top: 8px;
+}
+nav .mainType {
+  float: left;
+  width: 100px;
+  margin-top: 8px;
+}
+nav .exceptionTypes {
+  float: left;
+  width: 100px;
+  margin-top: 8px;
+}
+article .bukenengchongming {
+  margin: 0 15px;
+  background: #95a5a6;
+  position: relative;
+  height: 50px;
+}
+article .bukenengchongming .bukenengchongmingitem {
+  width: 100px;
+  margin: 2px 5px;
+  background: #f1c40f;
+  float: left;
+}

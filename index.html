@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MO</title>
+  <link rel="stylesheet" href="./dist/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap/datetimepicker.css">
+  <link rel="stylesheet" href="./dist/css/index.css">
+  <!--[if lt IE 9]>
+    <script src="./dist/js/bootstrap/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header id="header">
+    <div class="title">MO管理</div>
+  </header>
+  <nav>
+    <label for="startDate">起始日期:</label>
+    <div class="input-group date form_date" data-date-format="yyyy/mm/dd" >
+      <input class="form-control" id="startDate" name="startDate" type="text" readonly >
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="endDate">截止时间:</label>
+    <div class="input-group date form_date" data-date-format="yyyy/mm/dd" >
+      <input class="form-control" id="endDate" name="endDate" type="text" readonly >
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="scope">厂别:</label>
+    <select name="scope" id="scope" class="form-control scope">
+      <option value="1">ARY</option>
+      <option value="1">CEL</option>
+      <option value="1">LCM</option>
+      <option value="1">IVO</option>
+    </select>
+    <label for="machineKind">机种:</label>
+    <select name="machineKind" id="machineKind" class="form-control machineKind">
+      <option value="1">几种1</option>
+      <option value="1">几种2</option>
+      <option value="1">几种3</option>
+      <option value="1">几种4</option>
+      <option value="1">几种5</option>
+    </select>
+    <label for="operation">站点:</label>
+    <select name="operation" id="operation" class="form-control operation">
+      <option value="">站点1</option>
+      <option value="">站点2</option>
+      <option value="">站点3</option>
+      <option value="">站点4</option>
+      <option value="">站点5</option>
+    </select>
+    <label for="Kind">类型:</label>
+    <select name="machineKind" id="machineKind" class="form-control machineKind">
+      <option value="">类型1</option>
+      <option value="">类型2</option>
+    </select>
+    <label for="mainType">主状态:</label>
+    <select name="mainType" id="mainType" class="form-control mainType">
+      <option value="">类型1</option>
+      <option value="">类型2</option>
+    </select>
+    <label for="exceptionTypes">异常类型:</label>
+    <select name="exceptionTypes" id="exceptionTypes" class="form-control exceptionTypes">
+      <option value="">类型1</option>
+      <option value="">类型2</option>
+    </select>
+
+
+  </nav>
+  <div class="box"></div>
+  <article>
+      <div class="bukenengchongming">
+      <div class="bukenengchongmingitem">厂别</div>
+      <div class="bukenengchongmingitem">机种</div>
+      <div class="bukenengchongmingitem">类型</div>
+      <div class="bukenengchongmingitem">主状态</div>
+      <div class="bukenengchongmingitem">异常类型</div>
+      <div class="bukenengchongmingitem">责任站点</div>
+      <div class="bukenengchongmingitem">姓名/工号</div>
+      <div class="bukenengchongmingitem">复训结果</div>
+    </div>
+    <!-- <div class="body">
+      
+    </div>
+    <div class="foonter">
+      <div class="prePage">&lt;</div>
+      <div class="nowPage">1</div>
+      <span>~</span>
+      <div class="allPage">20</div>
+      <div class="aftPage">&gt;</div>
+    </div> -->
+  </article>
+  <footer></footer>
+  <script src="./dist/js/jquery/jquery-1.9.1.min.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap.min.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap-datetimepicker.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap-datetimepicker.fr.js"></script>
+  <script src="./dist/js/index.js"></script>
+</body>
+
+</html>
