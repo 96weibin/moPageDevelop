@@ -27,6 +27,29 @@
 @headerHeight : 65px;
 @navHeight : 50px;
 @clientWidth : 1600px;
+//宽度
+@item_date_width:100px;
+@item_scope_width:100px;
+@item_machineKind_width:100px;
+@item_moType_width:100px;
+@item_mainType_width:100px;
+@item_exceptionTypes_width:100px;
+@item_operationGroup_width:110px;
+@item_employee_width:100px;
+@item_trainingResult_width:100px;
+@item_trainingAgain_width:100px;
+@item_managePerson_width:100px;
+@item_mainState_width: 100px;
+
+//边距
+@main_margin: 0 15px;
+@item_margin: 5px 10px;
+@label_margin_left: 10px;
+@label_margin_right: 10px;
+@item_margin_both: 20px;
+@item_margin_top: 10px;
+//圆角
+@main_radius:10px;
 *{
   margin: 0;
   padding: 0;
@@ -49,66 +72,392 @@ header{
   }
 }
 nav{
-  // border-top: 1px solid @gray;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  margin: 0 15px;
+  border-top-right-radius: @main_radius;
+  border-top-left-radius: @main_radius;
+  margin: @main_margin;
   // padding-top: 0.1 * @navHeight;
   height: @navHeight;
   background: @gray;
   label{
     float: left;
     line-height: @navHeight;
-    margin:0 0 0 10px;
-    // display: block;
-    
-
+    margin-left:@label_margin_left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .linkLabel{
+    margin-left: @label_margin_left;
+    margin-right: @label_margin_right;
   }
   .form_date{
     height: 30px;
-    width: 140px;
+    width: 175px;
     margin-top: 8px;
     float: left;
+  }
+  .scope,.machineKind,.operation,.moKind,.mainType,.exceptionTypes{
+    float: left;
+    margin-top: 8px;
   }
   .scope{
-    float: left;
     width: 80px;
-    margin-top: 8px;
   }
   .machineKind{
-    float: left;
     width: 100px;
-    margin-top: 8px;
   }
   .operation{
-    float: left;
     width: 100px;
-    margin-top: 8px;
+  }
+  .moKind{
+    width: 120px;
   }
   .mainType{
-    float: left;
     width: 100px;
-    margin-top: 8px;
   }
   .exceptionTypes{
-    float: left;
+    width: 150px;
+    border-radius: 15px;
+  }
+  .searchBtn{
     width: 100px;
+    height: 34px;
     margin-top: 8px;
+    margin-left: 10px;
+    line-height: 34px;
+    background: @green1;
+    float: left;
+    border-radius: @main_radius;
+    cursor: pointer;
+    position: relative;
+    
+    span{
+      margin-left: 10px;
+      font-weight: bold;
+      color: @white;
+      font-size: 18px;
+    }
+    img{
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+  .searchBtn:hover{
+    top: 2px;
+    box-shadow: -1px -1px 1px @green2;
+    box-shadow: -2px -2px 1px @green2;
+  }
+  .addNew{
+    float: left;
+    height: 34px;
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    img{
+      vertical-align: middle;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+  }
+  .addNew:hover{
+    img{
+      position: relative;
+      top: 2px;
+      box-shadow: -1px -1px 1px @blue;
+      box-shadow: -2px -2px 1px @blue;
+    }
   }
 }
 article{
-  // margin-top: 1px;
-  .bukenengchongming{
-    margin:0 15px;
-    background: @gray2;
+  .title{
+    margin:@main_margin;
+    background: @blue;
     position: relative;
-    height: 50px;
-    .bukenengchongmingitem{
-      width: 100px;
-      margin: 2px 5px;
-      background: @yellow;
+    height: 40px;
+    .item{
+      margin: @item_margin;
+      height: 30px;
+      line-height: 30px;
+      background: @white;
+      text-align: center;
       float: left;
+      font-weight: bold; 
+      border-radius: 5px;     
+      transition: 0.2s;
+    }
+    .item:hover{
+      background: @dark;
+      color: @white;
+    }
+    .first{
+      margin-left: @item_margin_both + 5px;
+    }
+    .date{
+      width: @item_date_width;
+    }
+    .scope{
+      width: @item_scope_width;
+    }
+
+    .machineKind{
+      width: @item_machineKind_width;
+    }
+    .moType{
+      width: @item_moType_width;
+    }
+    .mainType{
+      width: @item_mainType_width;
+    }
+    .exceptionTypes{
+      width: @item_exceptionTypes_width;
+    }
+    .operationGroup{
+      width: @item_operationGroup_width;
+    }
+    .employee{
+      width: @item_employee_width;
+    }
+    .trainingResult{
+      width: @item_trainingResult_width;
     }
   }
+  .body{
+    margin: @main_margin;
+    border: 1px solid @gray2;
+    height: 550px;
+    overflow: auto;
+    background: @white;
+    .listRow{
+      height: 40px;
+      background: @gray;
+      margin-left: @item_margin_both - 5px;
+      margin-right: @item_margin_both - 5px;
+      margin-top: @item_margin_top;
+      border-radius: 5px;
+      .item{
+        margin: @item_margin;
+        height: 28px;
+        line-height: 28px;
+        background: @white;
+        text-align: center;
+        float: left;
+        font-weight: bold; 
+        border-radius: 5px;     
+        transition: 0.2s;
+      }
+      .first{
+        margin-left: 10px;
+      }
+      .date{
+        width: @item_date_width;
+      }
+      .scope{
+        width: @item_scope_width;
+      }
+      .machineKind{
+        width: @item_machineKind_width;
+      }
+      .moType{
+        width: @item_moType_width;
+      }
+      .mainType{
+        width: @item_mainType_width;
+      }
+      .exceptionTypes{
+        width: @item_exceptionTypes_width;
+      }
+      .operationGroup{
+        width: @item_operationGroup_width;
+        float: left;
+        
+        img{
+          width: 10px;
+          transition: 0.2s;
+        }
+      }
+      .operationGroup:hover{
+        
+        img{
+          width: 10px;
+          transform: rotate(-90deg);
+        }
+      }
+      .employee{
+        width: @item_employee_width;
+        img{
+          width: 10px;
+          transition: 0.2s;
+        }
+      }
+      .employee:hover{
+        img{
+          transform: rotate(-90deg);
+        }
+      }
+      .trainingResult{
+        width: @item_trainingResult_width;
+      }
+    }
+  }
+  .footerBar{
+    background: @blue;
+    height: 30px;
+    margin: @main_margin;
+    border-bottom-left-radius: @main_radius;
+    border-bottom-right-radius: @main_radius;
+  }
 
+}
+.insertMo{
+  display: none;
+  height: 750px;
+  width: 1570px;
+  background: rgba(52, 73, 94, 0.9);
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%,-50%);
+  margin-left: -785px;
+  margin-top: -375px;
+  border-radius: 5px;
+  transition: 0.3s;
+  .title{
+    height: 50px;
+    width: 200px;
+    margin: 10px 15px 0 15px;
+    background: @white;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    color: @blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    line-height: 50px;
+    display: inline-block;
+  }
+  .closeBtn{
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    background: @gray;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+  }
+  .info{
+    margin: @main_margin;
+    height: 600px;
+    background: @white;
+    border-top-right-radius: 5px;
+    
+    padding-top: 10px;
+    label{
+      float: left;
+      line-height: @navHeight;
+      margin-left:@label_margin_left;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .form_date{
+      height: 30px;
+      width: 175px;
+      margin-top: 8px;
+      float: left;
+    }
+    .baseInfo{
+      .scope,.machineKind,.operation,.moKind,.mainType,.exceptionTypes,.trainingAgain,.managePerson,.mainState{
+        float: left;
+        margin-top: 8px;
+      }
+      .happenDate{
+        
+      }
+      .scope{
+        width: @item_scope_width;
+      }
+      .machineKind{
+        width: @item_machineKind_width;
+      }
+      .operation{
+        width: @item_operationGroup_width;
+      }
+      .moKind{
+        width: @item_moType_width;
+      }
+      .trainingAgain{
+        width: @item_trainingAgain_width;
+      }
+      .managePerson{
+        width: @item_managePerson_width;
+      }
+      .exceptionTypes{
+        width: @item_exceptionTypes_width;
+      }
+    }
+    .baseInfo::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .employeeInfo{
+      .operation,.employee,.operationAdd,.employeeAdd{
+        float: left;
+        margin-top: 8px;
+      }
+      .operationGroup{
+        .operation{
+          width: @item_operationGroup_width;
+        }
+        .employee{
+          width: @item_employee_width;
+        }
+      }
+      .operationGroup::after{
+        display: block;
+        content: '';
+        clear:both;
+      }
+    }
+    .employeeInfo::after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .mainState{
+      width: @item_mainState_width;
+    }
+    .memo{
+      min-height: 80px;
+      width: 800px;
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: @white;
+      border: 1px solid @gray3;
+    }
+  }
+  .bottomSubmit{
+    height: 50px;
+    margin: @main_margin;
+    background: @white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    .submit{
+      width: 150px;
+      height: 40px;
+      background: @green2;
+      font-weight: bold;
+      color: @white;
+      font-size: 30px;
+      line-height: 40px;
+      border-radius: 10px;
+      float: right;
+      margin-right: 20px;
+      text-align: center;
+    }
+  }
 }

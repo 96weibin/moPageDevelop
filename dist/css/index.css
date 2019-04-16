@@ -29,48 +29,386 @@ nav {
 nav label {
   float: left;
   line-height: 50px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+nav .linkLabel {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 nav .form_date {
   height: 30px;
-  width: 140px;
+  width: 175px;
   margin-top: 8px;
   float: left;
 }
-nav .scope {
-  float: left;
-  width: 80px;
-  margin-top: 8px;
-}
-nav .machineKind {
-  float: left;
-  width: 100px;
-  margin-top: 8px;
-}
-nav .operation {
-  float: left;
-  width: 100px;
-  margin-top: 8px;
-}
-nav .mainType {
-  float: left;
-  width: 100px;
-  margin-top: 8px;
-}
+nav .scope,
+nav .machineKind,
+nav .operation,
+nav .moKind,
+nav .mainType,
 nav .exceptionTypes {
   float: left;
-  width: 100px;
   margin-top: 8px;
 }
-article .bukenengchongming {
-  margin: 0 15px;
-  background: #95a5a6;
-  position: relative;
-  height: 50px;
+nav .scope {
+  width: 80px;
 }
-article .bukenengchongming .bukenengchongmingitem {
+nav .machineKind {
   width: 100px;
-  margin: 2px 5px;
-  background: #f1c40f;
+}
+nav .operation {
+  width: 100px;
+}
+nav .moKind {
+  width: 120px;
+}
+nav .mainType {
+  width: 100px;
+}
+nav .exceptionTypes {
+  width: 150px;
+  border-radius: 15px;
+}
+nav .searchBtn {
+  width: 100px;
+  height: 34px;
+  margin-top: 8px;
+  margin-left: 10px;
+  line-height: 34px;
+  background: #1abc9c;
   float: left;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+nav .searchBtn span {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #ecf0f0;
+  font-size: 18px;
+}
+nav .searchBtn img {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+nav .searchBtn:hover {
+  top: 2px;
+  box-shadow: -1px -1px 1px #16a085;
+  box-shadow: -2px -2px 1px #16a085;
+}
+nav .addNew {
+  float: left;
+  height: 34px;
+  margin-top: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+nav .addNew img {
+  vertical-align: middle;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .addNew:hover img {
+  position: relative;
+  top: 2px;
+  box-shadow: -1px -1px 1px #2980b9;
+  box-shadow: -2px -2px 1px #2980b9;
+}
+article .title {
+  margin: 0 15px;
+  background: #2980b9;
+  position: relative;
+  height: 40px;
+}
+article .title .item {
+  margin: 5px 10px;
+  height: 30px;
+  line-height: 30px;
+  background: #ecf0f0;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+article .title .item:hover {
+  background: #34495e;
+  color: #ecf0f0;
+}
+article .title .first {
+  margin-left: 25px;
+}
+article .title .date {
+  width: 100px;
+}
+article .title .scope {
+  width: 100px;
+}
+article .title .machineKind {
+  width: 100px;
+}
+article .title .moType {
+  width: 100px;
+}
+article .title .mainType {
+  width: 100px;
+}
+article .title .exceptionTypes {
+  width: 100px;
+}
+article .title .operationGroup {
+  width: 110px;
+}
+article .title .employee {
+  width: 100px;
+}
+article .title .trainingResult {
+  width: 100px;
+}
+article .body {
+  margin: 0 15px;
+  border: 1px solid #95a5a6;
+  height: 550px;
+  overflow: auto;
+  background: #ecf0f0;
+}
+article .body .listRow {
+  height: 40px;
+  background: #bdc3c7;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+article .body .listRow .item {
+  margin: 5px 10px;
+  height: 28px;
+  line-height: 28px;
+  background: #ecf0f0;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+article .body .listRow .first {
+  margin-left: 10px;
+}
+article .body .listRow .date {
+  width: 100px;
+}
+article .body .listRow .scope {
+  width: 100px;
+}
+article .body .listRow .machineKind {
+  width: 100px;
+}
+article .body .listRow .moType {
+  width: 100px;
+}
+article .body .listRow .mainType {
+  width: 100px;
+}
+article .body .listRow .exceptionTypes {
+  width: 100px;
+}
+article .body .listRow .operationGroup {
+  width: 110px;
+  float: left;
+}
+article .body .listRow .operationGroup img {
+  width: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+article .body .listRow .operationGroup:hover img {
+  width: 10px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+article .body .listRow .employee {
+  width: 100px;
+}
+article .body .listRow .employee img {
+  width: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+article .body .listRow .employee:hover img {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+article .body .listRow .trainingResult {
+  width: 100px;
+}
+article .footerBar {
+  background: #2980b9;
+  height: 30px;
+  margin: 0 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.insertMo {
+  display: none;
+  height: 750px;
+  width: 1570px;
+  background: rgba(52, 73, 94, 0.9);
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin-left: -785px;
+  margin-top: -375px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.insertMo .title {
+  height: 50px;
+  width: 200px;
+  margin: 10px 15px 0 15px;
+  background: #ecf0f0;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: #2980b9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  line-height: 50px;
+  display: inline-block;
+}
+.insertMo .closeBtn {
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: #bdc3c7;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 5px;
+}
+.insertMo .info {
+  margin: 0 15px;
+  height: 600px;
+  background: #ecf0f0;
+  border-top-right-radius: 5px;
+  padding-top: 10px;
+}
+.insertMo .info label {
+  float: left;
+  line-height: 50px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.insertMo .info .form_date {
+  height: 30px;
+  width: 175px;
+  margin-top: 8px;
+  float: left;
+}
+.insertMo .info .baseInfo .scope,
+.insertMo .info .baseInfo .machineKind,
+.insertMo .info .baseInfo .operation,
+.insertMo .info .baseInfo .moKind,
+.insertMo .info .baseInfo .mainType,
+.insertMo .info .baseInfo .exceptionTypes,
+.insertMo .info .baseInfo .trainingAgain,
+.insertMo .info .baseInfo .managePerson,
+.insertMo .info .baseInfo .mainState {
+  float: left;
+  margin-top: 8px;
+}
+.insertMo .info .baseInfo .scope {
+  width: 100px;
+}
+.insertMo .info .baseInfo .machineKind {
+  width: 100px;
+}
+.insertMo .info .baseInfo .operation {
+  width: 110px;
+}
+.insertMo .info .baseInfo .moKind {
+  width: 100px;
+}
+.insertMo .info .baseInfo .trainingAgain {
+  width: 100px;
+}
+.insertMo .info .baseInfo .managePerson {
+  width: 100px;
+}
+.insertMo .info .baseInfo .exceptionTypes {
+  width: 100px;
+}
+.insertMo .info .baseInfo::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.insertMo .info .employeeInfo .operation,
+.insertMo .info .employeeInfo .employee,
+.insertMo .info .employeeInfo .operationAdd,
+.insertMo .info .employeeInfo .employeeAdd {
+  float: left;
+  margin-top: 8px;
+}
+.insertMo .info .employeeInfo .operationGroup .operation {
+  width: 110px;
+}
+.insertMo .info .employeeInfo .operationGroup .employee {
+  width: 100px;
+}
+.insertMo .info .employeeInfo .operationGroup::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.insertMo .info .employeeInfo::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.insertMo .info .mainState {
+  width: 100px;
+}
+.insertMo .info .memo {
+  min-height: 80px;
+  width: 800px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #ecf0f0;
+  border: 1px solid #7f8c8d;
+}
+.insertMo .bottomSubmit {
+  height: 50px;
+  margin: 0 15px;
+  background: #ecf0f0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.insertMo .bottomSubmit .submit {
+  width: 150px;
+  height: 40px;
+  background: #16a085;
+  font-weight: bold;
+  color: #ecf0f0;
+  font-size: 30px;
+  line-height: 40px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 20px;
+  text-align: center;
 }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MO</title>
+  <link rel="stylesheet" href="./dist/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap/datetimepicker.css">
+  <link rel="stylesheet" href="./dist/css/index.css">
+  <!--[if lt IE 9]>
+    <script src="./dist/js/bootstrap/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header id="header">
+    <div class="title">MO管理</div>
+  </header>
+  <nav>
+    <label for="startDate">日期:</label>
+    <div class="input-group date form_date" data-date-format="yyyy/mm/dd" >
+      <input class="form-control" id="startDate" name="startDate" type="text" readonly >
+      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="endDate" class="linkLabel">~</label>
+    <div class="input-group date form_date" data-date-format="yyyy/mm/dd" >
+      <input class="form-control" id="endDate" name="endDate" type="text" readonly >
+      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="scope">厂别:</label>
+    <select name="scope" id="scope" class="form-control scope">
+      <option value="" selected></option>
+      <option value="1">ARY</option>
+      <option value="1">CEL</option>
+      <option value="1">LCM</option>
+      <option value="1">IVO</option>
+      <option value="1">All</option>
+    </select>
+    <label for="machineKind">机种:</label>
+    <select name="machineKind" id="machineKind" class="form-control machineKind">
+      <option value="" selected></option>
+      <option value="1">几种1</option>
+      <option value="1">几种2</option>
+      <option value="1">几种3</option>
+      <option value="1">几种4</option>
+      <option value="1">几种5</option>
+    </select>
+    <label for="operation">站点:</label>
+    <select name="operation" id="operation" class="form-control operation">
+      <option value="" selected></option>
+      <option value="">站点1</option>
+      <option value="">站点2</option>
+      <option value="">站点3</option>
+      <option value="">站点4</option>
+      <option value="">站点5</option>
+    </select>
+    <label for="moKind">MO类型:</label>
+    <select name="moKind" id="moKind" class="form-control moKind">
+      <option value="" selected></option>
+      <option value="">一般事项</option>
+      <option value="">重大MO</option>
+    </select>
+    <label for="mainType">主状态:</label>
+    <select name="mainType" id="mainType" class="form-control mainType">
+      <option value="" selected></option>
+      <option value="">类型1</option>
+      <option value="">类型2</option>
+    </select>
+    <label for="exceptionTypes">异常类型:</label>
+    <input type="text" class="form-control exceptionTypes" id="exceptionTypes">
+    <div class="searchBtn">
+      <span>搜索</span>
+      <img src="./dist/img/search.png" alt="搜索">
+    </div>
+    <div class="addNew">
+      <img src="./dist/img/add.png" alt="新增">
+    </div>
+  </nav>
+  <article>
+    <div class="title">
+      <div class="item first date">日期</div>
+      <div class="item scope">厂别</div>
+      <div class="item machineKind">机种</div>
+      <div class="item moType">类型</div>
+      <div class="item mainType">主状态</div>
+      <div class="item exceptionTypes">异常类型</div>
+      <div class="item operationGroup">责任站点</div>
+      <div class="item employee">姓名/工号</div>
+      <div class="item trainingResult">复训结果</div>
+    </div>
+    <div class="body">
+      <div class="listRow">
+        <div class="date item first">2019-08-07</div>
+        <div class="scope item">LCM</div>
+        <div class="machineKind item">S0901</div>
+        <div class="moType item">一般事项</div>
+        <div class="mainType item">外观</div>
+        <div class="exceptionTypes item">铁框夹异物</div>
+        <div class="operationGroup item">
+          <span>站点:</span>
+          <span class="operationCount">8</span>
+          <span>个</span>
+          <img src="./dist/img/三角.png" alt="下拉">
+        </div>
+        <div class="employee item">
+          <span class="employeeCount">16</span>
+          <span>人</span>
+          <img src="./dist/img/三角.png" alt="下拉">
+        </div>
+        <div class="trainingResult item">ok</div>
+      </div>
+    </div>
+    <div class="footerBar">
+      <!-- <div class="prePage">&lt;</div>
+      <div class="nowPage">1</div>
+      <span>~</span>
+      <div class="allPage">20</div>
+      <div class="aftPage">&gt;</div> -->
+    </div>
+  </article>
+  <footer></footer>
+  <div class="insertMo">
+
+    <div class="title">新增MO</div>
+    <div class="closeBtn">
+      <img src="./dist/img/close.png" alt="关闭">
+    </div>
+    <div class="info">
+      <div class="baseInfo">
+          <label for="happenDate">发生日期:</label>
+          <div class="input-group date form_date" data-date-format="yyyy/mm/dd" >
+            <input class="form-control" id="happenDate" name="happenDate" type="text" readonly >
+            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          </div>
+          <label for="scope">厂别:</label>
+          <select name="scope" id="scope" class="form-control scope">
+            <option value="" selected></option>
+            <option value="1">ARY</option>
+            <option value="1">CEL</option>
+            <option value="1">LCM</option>
+            <option value="1">IVO</option>
+            <option value="1">All</option>
+          </select>
+    
+          <label for="machineKind">机种:</label>
+          <select name="machineKind" id="machineKind" class="form-control machineKind">
+            <option value="" selected></option>
+            <option value="1">几种1</option>
+            <option value="1">几种2</option>
+            <option value="1">几种3</option>
+            <option value="1">几种4</option>
+            <option value="1">几种5</option>
+          </select>
+    
+          <label for="moKind">MO类型:</label>
+          <select name="moKind" id="moKind" class="form-control moKind">
+            <option value="" selected></option>
+            <option value="">一般事项</option>
+            <option value="">重大MO</option>
+          </select>
+          <label for="trainingAgain">复训:</label>
+          <select name="trainingAgain" id="trainingAgain" class="form-control trainingAgain">
+            <option value="" selected></option>
+            <option value="">是</option>
+            <option value="">否</option>
+          </select>
+          <label for="managePerson">管理员</label>
+          <select name="managePerson" id="managePerson" class="form-control managePerson last">
+            <option value=""></option>
+            <option value="">管理员1</option>
+            <option value="">管理员2</option>
+            <option value="">管理员3</option>
+            <option value="">管理员4</option>
+          </select>
+          <label for="mainState">主状态:</label>
+        <select name="mainState" id="mainState" class="form-control mainState">
+          <option value="" selected></option>
+          <option value="">状态1</option>
+          <option value="">状态2</option>
+          <option value="">状态3</option>
+          <option value="">状态4</option>
+          <option value="">状态5</option>
+        </select>
+        <label for="exceptionTypes">异常类型:</label>
+        <input type="text" class="form-control exceptionTypes">
+      </div>
+      <div class="employeeInfo">
+        <div class="operationGroup">
+            <label for="operation">站点:</label>
+            <select name="operation" id="operation" class="form-control operation">
+              <option value=""></option>
+              <option value="">站点1</option>
+              <option value="">站点2</option>
+              <option value="">站点3</option>
+              <option value="">站点4</option>
+            </select>
+            <div class="operationAdd">
+              <img src="./dist/img/add.png" alt="添加站点">
+            </div>
+            <label for="employee">人员</label>
+            <select name="employee" id="employee" class="form-control employee">
+              <option value=""></option>
+              <option value="">员工1</option>
+              <option value="">员工2</option>
+              <option value="">员工3</option>
+              <option value="">员工4</option>
+            </select>
+            <div class="employeeAdd">
+              <img src="./dist/img/add.png" alt="添加人员">
+            </div>
+        </div>
+      </div>
+
+      <label for="memo">备注:</label>
+      <div class="memo" id="memo" contenteditable="true"></div>
+    </div>
+    <div class="bottomSubmit">
+        <div class="submit">
+            提交
+          </div>
+    </div>
+    
+  </div>
+  <script src="./dist/js/jquery/jquery-1.9.1.min.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap.min.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap-datetimepicker.js"></script>
+  <script src="./dist/js/bootstrap/bootstrap-datetimepicker.fr.js"></script>
+  <script src="./dist/js/index.js"></script>
+</body>
+
+</html>
