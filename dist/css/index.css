@@ -381,7 +381,7 @@ article .footerBar {
   width: 100px;
 }
 .insertMo .info .memo {
-  min-height: 80px;
+  min-height: 200px;
   width: 800px;
   position: absolute;
   top: 200px;

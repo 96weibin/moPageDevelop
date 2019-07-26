@@ -1,124 +1,218 @@
+@green1: #1abc9c;
+@green2: #16a085;
+@green3: #2ecc71;
+@green4: #27AE60;
+@blue: #3498db;
 
-@green1:#1abc9c;
-@green2:#16a085;
-@green3:#2ecc71;
-@green4:#27AE60;
-@blue:#3498db;
+@blue: #2980b9;
+@purple: #9b59b6;
+@purple: #8e44ad;
+@dark: #34495e;
+@dark2: #2c3e50;
 
-@blue:#2980b9;
-@purple:#9b59b6;
-@purple:#8e44ad;
-@dark:#34495e;
-@dark2:#2c3e50;
+@yellow: #f1c40f;
+@orange: #f39c12;
+@orange2: #e67e22;
+@orange3: #d35400;
+@red: #e74c3c;
 
-@yellow:#f1c40f;
-@orange:#f39c12;
-@orange2:#e67e22;
-@orange3:#d35400;
-@red:#e74c3c;
-
-@red2:#c0392b;
-@white:#ecf0f0;
-@gray:#bdc3c7;
-@gray2:#95a5a6;
-@gray3:#7f8c8d;
+@red2: #c0392b;
+@white: #ecf0f0;
+@gray: #bdc3c7;
+@gray2: #95a5a6;
+@gray3: #7f8c8d;
 
 //高度
 @headerHeight : 65px;
-@navHeight : 50px;
-@clientWidth : 1600px;
+@navHeight : 100px;
+// @clientWidth : 1600px;
 //宽度
-@item_date_width:100px;
-@item_scope_width:100px;
-@item_machineKind_width:100px;
-@item_moType_width:100px;
-@item_mainType_width:100px;
-@item_exceptionTypes_width:100px;
-@item_operationGroup_width:110px;
-@item_employee_width:100px;
-@item_trainingResult_width:100px;
-@item_trainingAgain_width:100px;
-@item_managePerson_width:100px;
-@item_mainState_width: 100px;
+@main_page_width: 1024px;
+@item_date_width: 90px;
+@item_scope_width: 45px;
+@item_machineKind_width: 80px;
+@item_moType_width: 80px;
+@item_mainType_width: 80px;
+@item_exceptionTypes_width: 100px;
+@item_operationGroup_width: 110px;
+@item_employee_width: 100px;
+@item_addEmployee_width: 150px;
+@item_trainingResult_width: 100px;
+@item_trainingAgain_width: 45px;
+@item_managePerson_width: 70px;
+@item_mainState_width: 80px;
+@item_badCount_width: 50px;
+@item_productCount_width: 50px;
+@item_badRate_width: 50px;
+
 
 //边距
-@main_margin: 0 15px;
+@main_margin: 0 auto;
 @item_margin: 5px 10px;
 @label_margin_left: 10px;
 @label_margin_right: 10px;
 @item_margin_both: 20px;
 @item_margin_top: 10px;
 //圆角
-@main_radius:10px;
-*{
+@main_radius: 10px;
+
+* {
   margin: 0;
   padding: 0;
 }
-html,body{
+
+html,
+body {
   color: @dark;
-  // min-width: 1300px;
+  width: 100%;
+  height: 100%;
+  // min-width: 1430px;
   font-size: 14px;
-  width: @clientWidth;
+
+  // width: @clientWidth;
+  .form-control {
+    padding: 4px 0;
+    
+  }
 }
-header{
+
+.clear {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.red {
+  color: @red2;
+}
+
+.green {
+  color: @green3;
+}
+
+.blue {
+  color: @blue;
+}
+
+.orange {
+  color: @orange2;
+}
+
+header {
   height: @headerHeight;
-  .title{
+
+  .title {
     height: @headerHeight;
     line-height: @headerHeight;
     font-size: 0.5 * @headerHeight;
     margin-left: @headerHeight;
     color: @blue;
-    font-weight : bold;
+    font-weight: bold;
   }
 }
-nav{
+
+nav {
   border-top-right-radius: @main_radius;
   border-top-left-radius: @main_radius;
   margin: @main_margin;
   // padding-top: 0.1 * @navHeight;
   height: @navHeight;
+  width: @main_page_width;
+
   background: @gray;
-  label{
+
+  .firstRow {
+    .firstRowClear {
+      .clear;
+    }
+  }
+
+  .secondRow {
+    .secondRowClear {
+      .clear;
+    }
+  }
+
+
+  label {
     float: left;
-    line-height: @navHeight;
-    margin-left:@label_margin_left;
+    line-height: 50px;
+    margin-left: @label_margin_left;
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  .linkLabel{
+
+  .linkLabel {
     margin-left: @label_margin_left;
     margin-right: @label_margin_right;
   }
-  .form_date{
+
+  .form_date {
     height: 30px;
-    width: 175px;
+    width: 160px;
     margin-top: 8px;
     float: left;
   }
-  .scope,.machineKind,.operation,.moKind,.mainType,.exceptionTypes{
+
+  .scope,
+  .machineKind,
+  .operation,
+  .moKind,
+  .mainType,
+  .exceptionTypes,
+  .trainingResult {
     float: left;
     margin-top: 8px;
   }
-  .scope{
+
+  .scope {
+    width: 45px;
+  }
+
+  .machineKind {
+    width: 100px;
+  }
+  .chosen-container{
+    float: left;
+    font-size: 14px;
+    .chosen-single{
+      margin-top: 8px;
+      height: 34px;
+      line-height: 34px;
+      padding: 0 0 0 4px;
+      background: #fff;
+      b{
+        margin-top: 6px;
+      }
+      .search-choice-close{
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .operation {
+    width: 100px;
+  }
+
+  .moKind {
     width: 80px;
   }
-  .machineKind{
-    width: 100px;
+
+  .mainType {
+    width: 80px;
   }
-  .operation{
-    width: 100px;
+
+  .trainingResult {
+    width: 80px;
   }
-  .moKind{
-    width: 120px;
-  }
-  .mainType{
-    width: 100px;
-  }
-  .exceptionTypes{
-    width: 150px;
+
+  .exceptionTypes {
+    width: 180px;
     border-radius: 15px;
+
   }
-  .searchBtn{
+
+  .searchBtn {
     width: 100px;
     height: 34px;
     margin-top: 8px;
@@ -129,38 +223,63 @@ nav{
     border-radius: @main_radius;
     cursor: pointer;
     position: relative;
-    
-    span{
+
+    span {
       margin-left: 10px;
       font-weight: bold;
       color: @white;
       font-size: 18px;
     }
-    img{
+
+    img {
       margin-left: 10px;
       vertical-align: middle;
     }
   }
-  .searchBtn:hover{
+
+  .searchBtn:hover {
     top: 2px;
     box-shadow: -1px -1px 1px @green2;
     box-shadow: -2px -2px 1px @green2;
   }
-  .addNew{
+
+  .addNew {
     float: left;
     height: 34px;
     margin-top: 8px;
     margin-left: 10px;
     cursor: pointer;
     border-radius: 50%;
-    img{
+
+    img {
+      position: relative;
       vertical-align: middle;
       border-radius: 50%;
       transition: 0.2s;
     }
   }
-  .addNew:hover{
-    img{
+
+  .addNew:hover {
+    img {
+      top: 2px;
+      box-shadow: -1px -1px 1px @blue;
+      box-shadow: -2px -2px 1px @blue;
+    }
+  }
+
+  .export {
+    .addNew;
+
+    img {
+      position: relative;
+      border-radius: 5px;
+      vertical-align: middle;
+      transition: 0.2s;
+    }
+  }
+
+  .export:hover {
+    img {
       position: relative;
       top: 2px;
       box-shadow: -1px -1px 1px @blue;
@@ -168,296 +287,604 @@ nav{
     }
   }
 }
-article{
-  .title{
-    margin:@main_margin;
+
+article {
+  width: @main_page_width;
+  margin: @main_margin;
+
+  .title {
+    margin: @main_margin;
     background: @blue;
     position: relative;
     height: 40px;
-    .item{
+
+    .item {
       margin: @item_margin;
       height: 30px;
       line-height: 30px;
       background: @white;
       text-align: center;
       float: left;
-      font-weight: bold; 
-      border-radius: 5px;     
+      font-weight: bold;
+      border-radius: 5px;
       transition: 0.2s;
     }
-    .item:hover{
+
+    .item:hover {
       background: @dark;
       color: @white;
     }
-    .first{
+
+    .first {
       margin-left: @item_margin_both + 5px;
     }
-    .date{
+
+    .date {
       width: @item_date_width;
     }
-    .scope{
+
+    .scope {
       width: @item_scope_width;
     }
 
-    .machineKind{
+    .machineKind {
       width: @item_machineKind_width;
     }
-    .moType{
+
+    .moType {
       width: @item_moType_width;
     }
-    .mainType{
+
+    .mainType {
       width: @item_mainType_width;
     }
-    .exceptionTypes{
+
+    .exceptionTypes {
       width: @item_exceptionTypes_width;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
-    .operationGroup{
+
+    .operationGroup {
       width: @item_operationGroup_width;
     }
-    .employee{
+
+    .employee {
       width: @item_employee_width;
     }
-    .trainingResult{
+
+    .trainingResult {
       width: @item_trainingResult_width;
     }
   }
-  .body{
+
+  .body {
     margin: @main_margin;
     border: 1px solid @gray2;
-    height: 550px;
+    height: 520px;
     overflow: auto;
     background: @white;
-    .listRow{
+    overflow: auto;
+
+    .listRow {
       height: 40px;
       background: @gray;
       margin-left: @item_margin_both - 5px;
       margin-right: @item_margin_both - 5px;
       margin-top: @item_margin_top;
+      margin-bottom: @item_margin_top;
       border-radius: 5px;
-      .item{
+
+      .item {
         margin: @item_margin;
         height: 28px;
         line-height: 28px;
         background: @white;
         text-align: center;
         float: left;
-        font-weight: bold; 
-        border-radius: 5px;     
+        font-weight: bold;
+        border-radius: 5px;
         transition: 0.2s;
       }
-      .first{
+
+      .first {
         margin-left: 10px;
       }
-      .date{
+
+      .date {
         width: @item_date_width;
       }
-      .scope{
+
+      .scope {
         width: @item_scope_width;
       }
-      .machineKind{
+
+      .machineKind {
         width: @item_machineKind_width;
       }
-      .moType{
+
+      .moType {
         width: @item_moType_width;
       }
-      .mainType{
+
+      .mainType {
         width: @item_mainType_width;
       }
-      .exceptionTypes{
+
+      .exceptionTypes {
         width: @item_exceptionTypes_width;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
-      .operationGroup{
+
+      .operationGroup {
         width: @item_operationGroup_width;
         float: left;
-        
-        img{
+
+        // ul{
+        //   list-style: none;
+        //   li{
+        //     width: @item_operationGroup_width;
+        //     background: @green1;
+        //     border-bottom: 1px solid @blue;
+        //     margin-top: 10px;
+        //   }
+        // }
+        img {
           width: 10px;
           transition: 0.2s;
         }
       }
-      .operationGroup:hover{
-        
-        img{
+
+      .operationGroup:hover {
+        img {
           width: 10px;
           transform: rotate(-90deg);
         }
       }
-      .employee{
+
+      // .operationGroup::after{
+      //   content: '';
+      //   display: block;
+      //   clear: both;
+      // }
+      .employee {
         width: @item_employee_width;
-        img{
+
+        img {
           width: 10px;
           transition: 0.2s;
         }
       }
-      .employee:hover{
-        img{
+
+      .employee:hover {
+        img {
           transform: rotate(-90deg);
         }
       }
-      .trainingResult{
+
+      .trainingResult {
         width: @item_trainingResult_width;
       }
     }
   }
-  .footerBar{
+
+  .footerBar {
     background: @blue;
     height: 30px;
     margin: @main_margin;
     border-bottom-left-radius: @main_radius;
     border-bottom-right-radius: @main_radius;
+    overflow: hidden;
+
+    .pageControl {
+      width: 200px;
+      height: 28px;
+      margin: 1px auto;
+
+      .prePage {
+        float: left;
+        height: 28px;
+        position: relative;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .prePage:hover {
+        right: -2px;
+      }
+
+      .nowPage {
+        float: left;
+        width: 30px;
+        height: 20px;
+        margin-top: 5px;
+        border-radius: 4px;
+        background: @white;
+        line-height: 24px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      span {
+        float: left;
+        line-height: 30px;
+        font-weight: bold;
+        color: #1afa29;
+        font-size: 24px;
+        margin: 0 5px;
+      }
+
+      .allPage {
+        .nowPage;
+        background: @gray;
+      }
+
+      .aftPage {
+        .prePage;
+      }
+
+      .aftPage:hover {
+        left: -2px;
+      }
+    }
   }
 
 }
-.insertMo{
-  display: none;
-  height: 750px;
-  width: 1570px;
-  background: rgba(52, 73, 94, 0.9);
+
+.insertMo {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
-  top: 50%;
-  left: 50%;
-  // transform: translate(-50%,-50%);
-  margin-left: -785px;
-  margin-top: -375px;
-  border-radius: 5px;
-  transition: 0.3s;
-  .title{
-    height: 50px;
-    width: 200px;
-    margin: 10px 15px 0 15px;
-    background: @white;
-    font-size: 36px;
-    text-align: center;
-    font-weight: bold;
-    color: @blue;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    line-height: 50px;
-    display: inline-block;
-  }
-  .closeBtn{
-    float: right;
-    margin-right: 20px;
-    margin-top: 15px;
-    background: @gray;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
+  background: @gray;
+  background: rgba(243, 156, 18, 0.5);
+  display: none;
+
+  .bg {
+    width: 95%;
+    min-width: 1255px;
+    margin: 20px auto 0px auto;
+    padding-bottom: 20px;
+    background: rgba(52, 73, 94, 0.9);
+    // position: absolute;
+    z-index: 2;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    // margin-left: -785px;
+    // margin-top: -375px;
     border-radius: 5px;
-  }
-  .info{
-    margin: @main_margin;
-    height: 600px;
-    background: @white;
-    border-top-right-radius: 5px;
-    
-    padding-top: 10px;
-    label{
-      float: left;
-      line-height: @navHeight;
-      margin-left:@label_margin_left;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-    .form_date{
-      height: 30px;
-      width: 175px;
-      margin-top: 8px;
-      float: left;
-    }
-    .baseInfo{
-      .scope,.machineKind,.operation,.moKind,.mainType,.exceptionTypes,.trainingAgain,.managePerson,.mainState{
-        float: left;
-        margin-top: 8px;
-      }
-      .happenDate{
-        
-      }
-      .scope{
-        width: @item_scope_width;
-      }
-      .machineKind{
-        width: @item_machineKind_width;
-      }
-      .operation{
-        width: @item_operationGroup_width;
-      }
-      .moKind{
-        width: @item_moType_width;
-      }
-      .trainingAgain{
-        width: @item_trainingAgain_width;
-      }
-      .managePerson{
-        width: @item_managePerson_width;
-      }
-      .exceptionTypes{
-        width: @item_exceptionTypes_width;
-      }
-    }
-    .baseInfo::after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-    .employeeInfo{
-      .operation,.employee,.operationAdd,.employeeAdd{
-        float: left;
-        margin-top: 8px;
-      }
-      .operationGroup{
-        .operation{
-          width: @item_operationGroup_width;
-        }
-        .employee{
-          width: @item_employee_width;
-        }
-      }
-      .operationGroup::after{
-        display: block;
-        content: '';
-        clear:both;
-      }
-    }
-    .employeeInfo::after{
-      display: block;
-      content: '';
-      clear: both;
-    }
-    .mainState{
-      width: @item_mainState_width;
-    }
-    .memo{
-      min-height: 80px;
-      width: 800px;
-      position: absolute;
-      top: 200px;
-      left: 50%;
-      transform: translateX(-50%);
+    transition: 0.3s;
+
+    .title {
+      height: 50px;
+      width: 200px;
+      margin: 10px 15px 0 15px;
       background: @white;
-      border: 1px solid @gray3;
-    }
-  }
-  .bottomSubmit{
-    height: 50px;
-    margin: @main_margin;
-    background: @white;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    .submit{
-      width: 150px;
-      height: 40px;
-      background: @green2;
+      font-size: 36px;
+      text-align: center;
       font-weight: bold;
-      color: @white;
-      font-size: 30px;
-      line-height: 40px;
-      border-radius: 10px;
+      color: @blue;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      line-height: 50px;
+      display: inline-block;
+    }
+
+    .closeBtn {
       float: right;
       margin-right: 20px;
+      margin-top: 15px;
+      background: @gray;
       text-align: center;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 5px;
+    }
+
+    .info {
+      margin: 0 15px;
+      height: 600px;
+      background: @white;
+      border-top-right-radius: 5px;
+      overflow: auto;
+
+      padding-top: 10px;
+
+      label {
+        float: left;
+        line-height: 50px;
+        margin-left: @label_margin_left;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .form_date {
+        height: 30px;
+        width: 160px;
+        margin-top: 8px;
+        float: left;
+      }
+
+      .baseInfo {
+
+        .scope,
+        .machineKind,
+        .operation,
+        .moKind,
+        .mainType,
+        .exceptionTypes,
+        .trainingAgain,
+        .managePerson,
+        .mainState,
+        .badCount,
+        .productCount,
+        .badRate {
+          float: left;
+          margin-top: 8px;
+        }
+
+        .happenDate {}
+
+        .scope {
+          width: @item_scope_width;
+        }
+
+        .machineKind {
+          width: 100px;
+        }
+
+        .operation {
+          width: @item_operationGroup_width;
+        }
+
+        .moKind {
+          width: @item_moType_width;
+        }
+
+        .trainingAgain {
+          width: @item_trainingAgain_width;
+        }
+        .chosen-container{
+          float: left;
+          font-size: 14px;
+          .chosen-single{
+            margin-top: 8px;
+            height: 34px;
+            line-height: 34px;
+            padding: 0 0 0 4px;
+            background: #fff;
+            b{
+              margin-top: 6px;
+            }
+          }
+          .search-choice-close{
+            margin-top: 6px;
+          }
+        }
+        .managePerson {
+          width: @item_managePerson_width;
+        }
+
+        .mainState {}
+
+        label[for="insertExceptionTypes"] {
+          clear: left;
+        }
+
+        .exceptionTypes {
+          width: @item_exceptionTypes_width;
+        }
+
+        .productCount {
+          width: @item_productCount_width;
+        }
+
+        .badCount {
+          width: @item_badCount_width;
+        }
+
+        .badRate {
+          width: @item_badRate_width;
+        }
+      }
+
+      .baseInfo::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .employeeInfo {
+
+        .operation,
+        .addEmployee,
+        .operationAdd,
+        .employeeAdd,
+        .operationDel,
+        .employeeDel {
+          float: left;
+          margin-top: 8px;
+        }
+
+        .operationGroup {
+          .aOperation {
+            width: 200px;
+            float: left;
+          }
+
+          .operation {
+            width: @item_operationGroup_width;
+          }
+
+          .operationDel {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-top: 20px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .operationAdd {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-top: 20px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .operationClear {
+            .clear;
+          }
+
+          .employeeGroup {
+            zoom: 1;
+            float: left;
+            width: 950px;
+            border-bottom: 1px solid @gray2;
+            padding-bottom: 5px;
+
+            .aEmployee {
+              .addEmployee {
+                width: @item_addEmployee_width;
+                float: left;
+              }
+              .chosen-container{
+                float: left;
+                font-size: 14px;
+                .chosen-single{
+                  margin-top: 8px;
+                  height: 34px;
+                  line-height: 34px;
+                  padding: 0 0 0 4px;
+                  background: #fff;
+                  b{
+                    margin-top: 6px;
+                  }
+                }
+              }
+
+              .employeeDel {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-top: 20px;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              .employeeAdd {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-top: 20px;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+
+            // .employeeAdd::after{
+            //   display: block;
+            //   content: '';
+            //   clear:both;
+            // }
+            .employeeClear {
+              .clear;
+            }
+          }
+
+        }
+
+        .operationGroup::after {
+          display: block;
+          content: '';
+          clear: both;
+        }
+      }
+
+      .employeeInfo::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+      .mainState {
+        width: @item_mainState_width;
+      }
+
+      .memo {
+        float: left;
+        margin-left: 40px;
+        min-height: 200px;
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 800px;
+        background: @white;
+        border: 1px solid @gray3;
+      }
+    }
+
+    .bottomButton {
+      height: 50px;
+      margin: 0 15px;
+      background: @white;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      .submit {
+        width: 150px;
+        height: 40px;
+        background: @green2;
+        font-weight: bold;
+        color: @white;
+        font-size: 30px;
+        line-height: 40px;
+        border-radius: 10px;
+        float: right;
+        margin-right: 20px;
+        text-align: center;
+        transform: 0.2s;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .delete {
+        .submit;
+        background: @red2;
+      }
+
+      .delete:hover {
+        top: 2px;
+        left: 2px;
+        box-shadow: -1px -1px 1px @blue;
+        box-shadow: -2px -2px 1px @blue;
+      }
+
+      .submit:hover {
+        top: 2px;
+        left: 2px;
+        box-shadow: -1px -1px 1px @blue;
+        box-shadow: -2px -2px 1px @blue;
+      }
     }
   }
 }

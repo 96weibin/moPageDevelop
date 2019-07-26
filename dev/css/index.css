@@ -5,8 +5,30 @@
 html,
 body {
   color: #34495e;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
-  width: 1600px;
+}
+html .form-control,
+body .form-control {
+  padding: 4px 0;
+}
+.clear {
+  content: '';
+  display: block;
+  clear: both;
+}
+.red {
+  color: #c0392b;
+}
+.green {
+  color: #2ecc71;
+}
+.blue {
+  color: #2980b9;
+}
+.orange {
+  color: #e67e22;
 }
 header {
   height: 65px;
@@ -22,9 +44,20 @@ header .title {
 nav {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  margin: 0 15px;
-  height: 50px;
+  margin: 0 auto;
+  height: 100px;
+  width: 1024px;
   background: #bdc3c7;
+}
+nav .firstRow .firstRowClear {
+  content: '';
+  display: block;
+  clear: both;
+}
+nav .secondRow .secondRowClear {
+  content: '';
+  display: block;
+  clear: both;
 }
 nav label {
   float: left;
@@ -39,7 +72,7 @@ nav .linkLabel {
 }
 nav .form_date {
   height: 30px;
-  width: 175px;
+  width: 160px;
   margin-top: 8px;
   float: left;
 }
@@ -48,27 +81,48 @@ nav .machineKind,
 nav .operation,
 nav .moKind,
 nav .mainType,
-nav .exceptionTypes {
+nav .exceptionTypes,
+nav .trainingResult {
   float: left;
   margin-top: 8px;
 }
 nav .scope {
-  width: 80px;
+  width: 45px;
 }
 nav .machineKind {
   width: 100px;
+}
+nav .chosen-container {
+  float: left;
+  font-size: 14px;
+}
+nav .chosen-container .chosen-single {
+  margin-top: 8px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 4px;
+  background: #fff;
+}
+nav .chosen-container .chosen-single b {
+  margin-top: 6px;
+}
+nav .chosen-container .search-choice-close {
+  margin-top: 6px;
 }
 nav .operation {
   width: 100px;
 }
 nav .moKind {
-  width: 120px;
+  width: 80px;
 }
 nav .mainType {
-  width: 100px;
+  width: 80px;
+}
+nav .trainingResult {
+  width: 80px;
 }
 nav .exceptionTypes {
-  width: 150px;
+  width: 180px;
   border-radius: 15px;
 }
 nav .searchBtn {
@@ -107,18 +161,48 @@ nav .addNew {
   border-radius: 50%;
 }
 nav .addNew img {
+  position: relative;
   vertical-align: middle;
   border-radius: 50%;
   transition: 0.2s;
 }
 nav .addNew:hover img {
+  top: 2px;
+  box-shadow: -1px -1px 1px #2980b9;
+  box-shadow: -2px -2px 1px #2980b9;
+}
+nav .export {
+  float: left;
+  height: 34px;
+  margin-top: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+nav .export img {
+  position: relative;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+nav .export img {
+  position: relative;
+  border-radius: 5px;
+  vertical-align: middle;
+  transition: 0.2s;
+}
+nav .export:hover img {
   position: relative;
   top: 2px;
   box-shadow: -1px -1px 1px #2980b9;
   box-shadow: -2px -2px 1px #2980b9;
 }
+article {
+  width: 1024px;
+  margin: 0 auto;
+}
 article .title {
-  margin: 0 15px;
+  margin: 0 auto;
   background: #2980b9;
   position: relative;
   height: 40px;
@@ -142,22 +226,25 @@ article .title .first {
   margin-left: 25px;
 }
 article .title .date {
-  width: 100px;
+  width: 90px;
 }
 article .title .scope {
-  width: 100px;
+  width: 45px;
 }
 article .title .machineKind {
-  width: 100px;
+  width: 80px;
 }
 article .title .moType {
-  width: 100px;
+  width: 80px;
 }
 article .title .mainType {
-  width: 100px;
+  width: 80px;
 }
 article .title .exceptionTypes {
   width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 article .title .operationGroup {
   width: 110px;
@@ -169,11 +256,11 @@ article .title .trainingResult {
   width: 100px;
 }
 article .body {
-  margin: 0 15px;
+  margin: 0 auto;
   border: 1px solid #95a5a6;
-  height: 550px;
-  overflow: auto;
+  height: 520px;
   background: #ecf0f0;
+  overflow: auto;
 }
 article .body .listRow {
   height: 40px;
@@ -181,6 +268,7 @@ article .body .listRow {
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
 }
 article .body .listRow .item {
@@ -198,22 +286,25 @@ article .body .listRow .first {
   margin-left: 10px;
 }
 article .body .listRow .date {
-  width: 100px;
+  width: 90px;
 }
 article .body .listRow .scope {
-  width: 100px;
+  width: 45px;
 }
 article .body .listRow .machineKind {
-  width: 100px;
+  width: 80px;
 }
 article .body .listRow .moType {
-  width: 100px;
+  width: 80px;
 }
 article .body .listRow .mainType {
-  width: 100px;
+  width: 80px;
 }
 article .body .listRow .exceptionTypes {
   width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 article .body .listRow .operationGroup {
   width: 110px;
@@ -243,25 +334,93 @@ article .body .listRow .trainingResult {
 article .footerBar {
   background: #2980b9;
   height: 30px;
-  margin: 0 15px;
+  margin: 0 auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+article .footerBar .pageControl {
+  width: 200px;
+  height: 28px;
+  margin: 1px auto;
+}
+article .footerBar .pageControl .prePage {
+  float: left;
+  height: 28px;
+  position: relative;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+article .footerBar .pageControl .prePage img {
+  height: 100%;
+}
+article .footerBar .pageControl .prePage:hover {
+  right: -2px;
+}
+article .footerBar .pageControl .nowPage {
+  float: left;
+  width: 30px;
+  height: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  background: #ecf0f0;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+article .footerBar .pageControl span {
+  float: left;
+  line-height: 30px;
+  font-weight: bold;
+  color: #1afa29;
+  font-size: 24px;
+  margin: 0 5px;
+}
+article .footerBar .pageControl .allPage {
+  float: left;
+  width: 30px;
+  height: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  background: #ecf0f0;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+  background: #bdc3c7;
+}
+article .footerBar .pageControl .aftPage {
+  float: left;
+  height: 28px;
+  position: relative;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+article .footerBar .pageControl .aftPage img {
+  height: 100%;
+}
+article .footerBar .pageControl .aftPage:hover {
+  left: -2px;
 }
 .insertMo {
-  display: none;
-  height: 750px;
-  width: 1570px;
-  background: rgba(52, 73, 94, 0.9);
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
-  top: 50%;
-  left: 50%;
-  margin-left: -785px;
-  margin-top: -375px;
+  background: #bdc3c7;
+  background: rgba(243, 156, 18, 0.5);
+  display: none;
+}
+.insertMo .bg {
+  width: 95%;
+  min-width: 1255px;
+  margin: 20px auto 0px auto;
+  padding-bottom: 20px;
+  background: rgba(52, 73, 94, 0.9);
+  z-index: 2;
   border-radius: 5px;
   transition: 0.3s;
 }
-.insertMo .title {
+.insertMo .bg .title {
   height: 50px;
   width: 200px;
   margin: 10px 15px 0 15px;
@@ -275,7 +434,7 @@ article .footerBar {
   line-height: 50px;
   display: inline-block;
 }
-.insertMo .closeBtn {
+.insertMo .bg .closeBtn {
   float: right;
   margin-right: 20px;
   margin-top: 15px;
@@ -286,108 +445,215 @@ article .footerBar {
   line-height: 36px;
   border-radius: 5px;
 }
-.insertMo .info {
+.insertMo .bg .info {
   margin: 0 15px;
   height: 600px;
   background: #ecf0f0;
   border-top-right-radius: 5px;
+  overflow: auto;
   padding-top: 10px;
 }
-.insertMo .info label {
+.insertMo .bg .info label {
   float: left;
   line-height: 50px;
   margin-left: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.insertMo .info .form_date {
+.insertMo .bg .info .form_date {
   height: 30px;
-  width: 175px;
+  width: 160px;
   margin-top: 8px;
   float: left;
 }
-.insertMo .info .baseInfo .scope,
-.insertMo .info .baseInfo .machineKind,
-.insertMo .info .baseInfo .operation,
-.insertMo .info .baseInfo .moKind,
-.insertMo .info .baseInfo .mainType,
-.insertMo .info .baseInfo .exceptionTypes,
-.insertMo .info .baseInfo .trainingAgain,
-.insertMo .info .baseInfo .managePerson,
-.insertMo .info .baseInfo .mainState {
+.insertMo .bg .info .baseInfo .scope,
+.insertMo .bg .info .baseInfo .machineKind,
+.insertMo .bg .info .baseInfo .operation,
+.insertMo .bg .info .baseInfo .moKind,
+.insertMo .bg .info .baseInfo .mainType,
+.insertMo .bg .info .baseInfo .exceptionTypes,
+.insertMo .bg .info .baseInfo .trainingAgain,
+.insertMo .bg .info .baseInfo .managePerson,
+.insertMo .bg .info .baseInfo .mainState,
+.insertMo .bg .info .baseInfo .badCount,
+.insertMo .bg .info .baseInfo .productCount,
+.insertMo .bg .info .baseInfo .badRate {
   float: left;
   margin-top: 8px;
 }
-.insertMo .info .baseInfo .scope {
+.insertMo .bg .info .baseInfo .scope {
+  width: 45px;
+}
+.insertMo .bg .info .baseInfo .machineKind {
   width: 100px;
 }
-.insertMo .info .baseInfo .machineKind {
-  width: 100px;
-}
-.insertMo .info .baseInfo .operation {
+.insertMo .bg .info .baseInfo .operation {
   width: 110px;
 }
-.insertMo .info .baseInfo .moKind {
+.insertMo .bg .info .baseInfo .moKind {
+  width: 80px;
+}
+.insertMo .bg .info .baseInfo .trainingAgain {
+  width: 45px;
+}
+.insertMo .bg .info .baseInfo .chosen-container {
+  float: left;
+  font-size: 14px;
+}
+.insertMo .bg .info .baseInfo .chosen-container .chosen-single {
+  margin-top: 8px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 4px;
+  background: #fff;
+}
+.insertMo .bg .info .baseInfo .chosen-container .chosen-single b {
+  margin-top: 6px;
+}
+.insertMo .bg .info .baseInfo .chosen-container .search-choice-close {
+  margin-top: 6px;
+}
+.insertMo .bg .info .baseInfo .managePerson {
+  width: 70px;
+}
+.insertMo .bg .info .baseInfo label[for="insertExceptionTypes"] {
+  clear: left;
+}
+.insertMo .bg .info .baseInfo .exceptionTypes {
   width: 100px;
 }
-.insertMo .info .baseInfo .trainingAgain {
-  width: 100px;
+.insertMo .bg .info .baseInfo .productCount {
+  width: 50px;
 }
-.insertMo .info .baseInfo .managePerson {
-  width: 100px;
+.insertMo .bg .info .baseInfo .badCount {
+  width: 50px;
 }
-.insertMo .info .baseInfo .exceptionTypes {
-  width: 100px;
+.insertMo .bg .info .baseInfo .badRate {
+  width: 50px;
 }
-.insertMo .info .baseInfo::after {
+.insertMo .bg .info .baseInfo::after {
   content: '';
   display: block;
   clear: both;
 }
-.insertMo .info .employeeInfo .operation,
-.insertMo .info .employeeInfo .employee,
-.insertMo .info .employeeInfo .operationAdd,
-.insertMo .info .employeeInfo .employeeAdd {
+.insertMo .bg .info .employeeInfo .operation,
+.insertMo .bg .info .employeeInfo .addEmployee,
+.insertMo .bg .info .employeeInfo .operationAdd,
+.insertMo .bg .info .employeeInfo .employeeAdd,
+.insertMo .bg .info .employeeInfo .operationDel,
+.insertMo .bg .info .employeeInfo .employeeDel {
   float: left;
   margin-top: 8px;
 }
-.insertMo .info .employeeInfo .operationGroup .operation {
+.insertMo .bg .info .employeeInfo .operationGroup .aOperation {
+  width: 200px;
+  float: left;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .operation {
   width: 110px;
 }
-.insertMo .info .employeeInfo .operationGroup .employee {
-  width: 100px;
+.insertMo .bg .info .employeeInfo .operationGroup .operationDel {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 20px;
 }
-.insertMo .info .employeeInfo .operationGroup::after {
+.insertMo .bg .info .employeeInfo .operationGroup .operationDel img {
+  width: 100%;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .operationAdd {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .operationAdd img {
+  width: 100%;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .operationClear {
+  content: '';
+  display: block;
+  clear: both;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup {
+  zoom: 1;
+  float: left;
+  width: 950px;
+  border-bottom: 1px solid #95a5a6;
+  padding-bottom: 5px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .addEmployee {
+  width: 150px;
+  float: left;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .chosen-container {
+  float: left;
+  font-size: 14px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .chosen-container .chosen-single {
+  margin-top: 8px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 4px;
+  background: #fff;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .chosen-container .chosen-single b {
+  margin-top: 6px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .employeeDel {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .employeeDel img {
+  width: 100%;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .employeeAdd {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .aEmployee .employeeAdd img {
+  width: 100%;
+}
+.insertMo .bg .info .employeeInfo .operationGroup .employeeGroup .employeeClear {
+  content: '';
+  display: block;
+  clear: both;
+}
+.insertMo .bg .info .employeeInfo .operationGroup::after {
   display: block;
   content: '';
   clear: both;
 }
-.insertMo .info .employeeInfo::after {
+.insertMo .bg .info .employeeInfo::after {
   display: block;
   content: '';
   clear: both;
 }
-.insertMo .info .mainState {
-  width: 100px;
+.insertMo .bg .info .mainState {
+  width: 80px;
 }
-.insertMo .info .memo {
-  min-height: 80px;
+.insertMo .bg .info .memo {
+  float: left;
+  margin-left: 40px;
+  min-height: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
   width: 800px;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
   background: #ecf0f0;
   border: 1px solid #7f8c8d;
 }
-.insertMo .bottomSubmit {
+.insertMo .bg .bottomButton {
   height: 50px;
   margin: 0 15px;
   background: #ecf0f0;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.insertMo .bottomSubmit .submit {
+.insertMo .bg .bottomButton .submit {
   width: 150px;
   height: 40px;
   background: #16a085;
@@ -399,4 +665,36 @@ article .footerBar {
   float: right;
   margin-right: 20px;
   text-align: center;
+  transform: 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+.insertMo .bg .bottomButton .delete {
+  width: 150px;
+  height: 40px;
+  background: #16a085;
+  font-weight: bold;
+  color: #ecf0f0;
+  font-size: 30px;
+  line-height: 40px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 20px;
+  text-align: center;
+  transform: 0.2s;
+  position: relative;
+  cursor: pointer;
+  background: #c0392b;
+}
+.insertMo .bg .bottomButton .delete:hover {
+  top: 2px;
+  left: 2px;
+  box-shadow: -1px -1px 1px #2980b9;
+  box-shadow: -2px -2px 1px #2980b9;
+}
+.insertMo .bg .bottomButton .submit:hover {
+  top: 2px;
+  left: 2px;
+  box-shadow: -1px -1px 1px #2980b9;
+  box-shadow: -2px -2px 1px #2980b9;
 }

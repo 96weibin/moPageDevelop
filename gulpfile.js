@@ -5,13 +5,15 @@ var imagemin = require('gulp-imagemin');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 
+var targetUrl = 'E:/AllWorkSpace/job/git/fhr/src/main/webapp/ext/portal/pages';
+// var targetUrl = '.';
 
 gulp.task('ES6', () => {
   var stream = gulp.src('./dev/js/**/*.js')
   .pipe(babel({
     presets : ['@babel/env']
   }))
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest(targetUrl + '/moDist/js'));
   return stream;
 })
 
@@ -29,12 +31,12 @@ gulp.task('postcss',()=>{
   ];
   return gulp.src('./dev/css/**/*.css')
   .pipe(postcss(plugins))
-  .pipe(gulp.dest('./dist/css'))
+  .pipe(gulp.dest(targetUrl + '/moDist/css'))
 })
 gulp.task('img',()=>{
   var stream = gulp.src('./dev/img/**/*.*')
   .pipe(imagemin())
-  .pipe(gulp.dest('dist/img'));
+  .pipe(gulp.dest( targetUrl + '/moDist/img'));
   return stream;
 })
 
